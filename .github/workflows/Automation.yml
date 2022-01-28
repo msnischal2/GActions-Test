@@ -16,4 +16,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app
     - name: Build App
       working-directory: CICD Sample
-      run: xcodebuild -project "CICD Sample.xcodeproj" -scheme "GActions-Test" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=N
+      run: xcodebuild build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
