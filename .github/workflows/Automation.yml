@@ -6,12 +6,12 @@ jobs:
   build-and-test:
     runs-on: macos-latest
     
-      steps:
+    steps:
         - uses: checkout@v2
         
         
         - name: Run Automation
           uses: github/super-linter@v3
-            env: 
+          env: 
             DEFAULT_BRANCH: main
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
