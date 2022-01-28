@@ -16,5 +16,5 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.app
 
-      - name: Build and test
+      - name: Build
         run: xcodebuild clean build CICD Sample
