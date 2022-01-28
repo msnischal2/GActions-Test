@@ -9,7 +9,6 @@ jobs:
     steps:
         - uses: checkout@v2
         
-        
         - name: Run Automation
           uses: github/super-linter@v3
           env: 
