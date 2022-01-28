@@ -10,7 +10,7 @@ jobs:
         - uses: checkout@v2
         
         - name: Run Automation
-          uses: github/super-linter@v3
+          uses: github/Automation@v3
           env: 
             DEFAULT_BRANCH: main
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
