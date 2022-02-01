@@ -42,6 +42,7 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Build app
+              ...
         #working-directory: CICD Sample
         #run: xcodebuild -project "CICD Sample.xcodeproj" -scheme "CICD Sample" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=N
         
