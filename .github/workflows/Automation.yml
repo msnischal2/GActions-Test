@@ -44,6 +44,12 @@ jobs:
       - name: Build app
         working-directory: CICD Sample
         run: xcodebuild -project "CICD Sample.xcodeproj" -scheme "CICD Sample" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=N
+        
+      - name: Clean up keychain and provisioning profile
+        if: ${{ always() }}
+        run: | 
+          security delete-keychain $RUNNER_TEMP/app-signing.keychain-db 
+          rm ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision
 
     
     #steps:
