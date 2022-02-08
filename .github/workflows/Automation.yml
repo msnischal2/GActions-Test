@@ -43,7 +43,7 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Build app
         working-directory: CICD Sample
-        run: xcodebuild -project "CICD Sample.xcodeproj" -scheme "CICD Sample" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=Y
+        run: xcodebuild -project "CICD Sample.xcodeproj" -scheme "CICD Sample" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=N
         
       - name: Clean up keychain and provisioning profile
         if: ${{ always() }}
